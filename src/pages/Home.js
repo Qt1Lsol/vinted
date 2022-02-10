@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import HeaderVinted from "../components/header";
 
 const Home = () => {
   const [data, setData] = useState();
@@ -23,7 +22,6 @@ const Home = () => {
     <div>En cours de chargement...</div>
   ) : (
     <div>
-      <header><HeaderVinted></header>
       {data.offers.map((offer) => {
         return (
           <Link key={offer._id} to={`/offer/${offer._id}`}>
