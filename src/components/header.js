@@ -1,4 +1,8 @@
+import { Link } from "react-router-dom";
+
 const HeaderVinted = () => {
-  <button onClick={() => {}}>connexion</button>;
+  <Link to="/login">
+    <button type="button">connexion</button>
+  </Link>;
 };
 export default HeaderVinted;
