@@ -9,9 +9,8 @@ import HeaderVinted from "./components/header";
 
 function App() {
   return (
-
     <Router>
-       {<HeaderVinted>}
+      <HeaderVinted />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />

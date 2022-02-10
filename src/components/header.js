@@ -6,6 +6,9 @@ const HeaderVinted = () => {
       <Link to="/login">
         <button type="button">connexion</button>
       </Link>
+      <Link to="/signup">
+        <button type="button">S'inscrire</button>
+      </Link>
     </header>
   );
 };
