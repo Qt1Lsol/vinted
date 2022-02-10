@@ -5,13 +5,13 @@ import Offer from "./pages/Offer";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 
-import HeaderVinted from "../components/header";
+import HeaderVinted from "./components/header";
 
 function App() {
   return (
-    
+
     <Router>
-       <header><HeaderVinted></header>
+       {<HeaderVinted>}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
