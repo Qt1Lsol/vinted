@@ -1,0 +1,59 @@
+header {
+  height: 40px;
+  display: flex;
+  margin-bottom: 15px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+
+div:nth-child(1) {
+  flex-grow: 2;
+}
+
+div:nth-child(2) {
+  flex-grow: 8;
+}
+
+div:nth-child(3) {
+  flex-grow: 2;
+}
+
+div:nth-child(4) {
+  flex-grow: 2;
+}
+
+.vinted-logo {
+  display: flex;
+  width: 100px;
+}
+
+.input-search {
+  display: flex;
+  border: none;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  width: 80%;
+}
+
+.btn-login {
+  border: solid 2px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  width: 100px;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.btn-signup {
+  border: solid 2px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  width: 100px;
+  border-radius: 5px;
+}
