@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import vinted_logo from "../assets/img/vinted_logo.png";
 import "../assets/css/header.css";
-import { IconName } from "react-icons/md";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const HeaderVinted = ({ token, setUser }) => {
   const navigate = useNavigate();
@@ -18,12 +18,20 @@ const HeaderVinted = ({ token, setUser }) => {
   ) : (
     <header>
       <div>
-        <img className="vinted-logo" alt="vinted_logo" src={vinted_logo} />
+        <Link to="/">
+          <img className="vinted-logo" alt="vinted_logo" src={vinted_logo} />
+        </Link>
       </div>
       <div>
         <form>
-          <span class="material-icons">search</span>
-          <input className="input-search" type="text" />
+          <div className="icon-search-div">
+            {/* <FontAwesomeIcon icon="envelope" className="icon-search" /> */}
+            <input
+              className="input-search"
+              type="text"
+              placeholder="Recherche des articles"
+            />
+          </div>
         </form>
       </div>
       <div>

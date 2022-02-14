@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import "../assets/css/home.css";
+import img_vinted from "../assets/img/img_vinted.png";
 
 const Home = () => {
   const [data, setData] = useState();
@@ -21,21 +23,20 @@ const Home = () => {
   return isLoading ? (
     <div>En cours de chargement...</div>
   ) : (
-    <div>
-      {data.offers.map((offer) => {
-        return (
-          <Link key={offer._id} to={`/offer/${offer._id}`}>
-            <div className="card">
-              <h2>{offer.product_name}</h2>
-              <img
-                style={{ height: 150 }}
-                src={offer.product_image.secure_url}
-                alt=""
-              />
-            </div>
-          </Link>
-        );
-      })}
+    <div className="home">
+      <img className="img-vinted" alt="img-vinted" src={img_vinted} />
+      <div className="container">
+        {data.offers.map((offer) => {
+          return (
+            <Link key={offer._id} to={`/offer/${offer._id}`}>
+              <div className="card">
+                <h2>{offer.product_name}</h2>
+                <img src={offer.product_image.secure_url} alt="" />
+              </div>
+            </Link>
+          );
+        })}
+      </div>
     </div>
   );
 };
