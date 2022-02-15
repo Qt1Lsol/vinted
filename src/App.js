@@ -6,8 +6,9 @@ import Home from "./pages/Home";
 import Offer from "./pages/Offer";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Publish from "./pages/Publish";
 import NotFound from "./pages/Notfound";
-
+import Payment from "./pages/Payment";
 
 import HeaderVinted from "./components/header";
 import { useState } from "react";
@@ -31,8 +32,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login setUser={setUser} />} />
+        <Route path="/publish" element={<Publish token={token} />} />
         <Route path="/signup" element={<Signup setUser={setUser} />} />
         <Route path="/offer/:id" element={<Offer />} />
+        <Route path="/payment" element={<Payment token={token} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

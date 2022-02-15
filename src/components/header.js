@@ -4,17 +4,44 @@ import "../assets/css/header.css";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const HeaderVinted = ({ token, setUser }) => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   return token ? (
-    <button
-      onClick={() => {
-        setUser(null);
-        navigate("/");
-      }}
-    >
-      Se déconnecter
-    </button>
+    <header>
+      <div>
+        <Link to="/">
+          <img className="vinted-logo" alt="vinted_logo" src={vinted_logo} />
+        </Link>
+      </div>
+      <div>
+        <form>
+          <div className="icon-search-div">
+            {/* <FontAwesomeIcon icon="envelope" className="icon-search" /> */}
+            <input
+              className="input-search"
+              type="text"
+              placeholder="Recherche des articles"
+            />
+          </div>
+        </form>
+      </div>
+      <div>
+        <Link
+          className="btn-logout"
+          to="/"
+          onClick={() => {
+            setUser(null);
+          }}
+        >
+          Se déconnecter
+        </Link>
+      </div>
+      <div>
+        <Link to="/publish" className="btn-publish">
+          Vend tes articles
+        </Link>
+      </div>
+    </header>
   ) : (
     <header>
       <div>
@@ -42,6 +69,11 @@ const HeaderVinted = ({ token, setUser }) => {
       <div>
         <Link to="/signup" className="btn-signup">
           S'inscrire
+        </Link>
+      </div>
+      <div>
+        <Link to="/publish" className="btn-publish">
+          Vend tes articles
         </Link>
       </div>
     </header>

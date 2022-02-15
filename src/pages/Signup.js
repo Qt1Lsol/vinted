@@ -18,7 +18,7 @@ const Signup = ({ setUser }) => {
 
   const handleSubmit = async (event) => {
     try {
-      event.preventdefault();
+      event.preventDefault();
       const response = await axios.post(
         "https://lereacteur-vinted-api.herokuapp.com/user/signup",
         {
@@ -41,7 +41,7 @@ const Signup = ({ setUser }) => {
   };
 
   return (
-    <form className="signup-form">
+    <form onSubmit={handleSubmit} className="signup-form">
       <div>
         <h1>S'inscrire</h1>
       </div>
@@ -85,6 +85,8 @@ const Signup = ({ setUser }) => {
           <Link to="/login">Tu as déja un compte ? Connecte-toi !</Link>
         </div>
       </div>
+
+      <span>{errorMessage}</span>
     </form>
   );
 };

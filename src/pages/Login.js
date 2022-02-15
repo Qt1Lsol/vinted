@@ -54,6 +54,10 @@ const Login = ({ setUser }) => {
       <div className="link">
         <Link to="/signup">Pas encore de compte ? Inscris-toi !</Link>
       </div>
+
+      <br />
+      <span>{errorMessage}</span>
+      
     </form>
   );
 };

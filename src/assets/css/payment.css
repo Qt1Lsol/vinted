@@ -1,0 +1,38 @@
+.card-payment {
+  background-color: white;
+  width: 500px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+form > button {
+  background-color: rgb(40, 194, 14);
+  border: none;
+  border-radius: 2px;
+  color: white;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  margin: 20px;
+}
+
+.col-price {
+  display: flex;
+  flex: 1;
+  width: 20%;
+}
+
+.col-description {
+  width: 80%;
+}
+
+.card-payment span {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}

@@ -5,21 +5,22 @@ header {
   justify-content: space-around;
   align-items: center;
   padding: 10px;
+  background-color: white;
 }
 
-div:nth-child(1) {
+header div:nth-child(1) {
   flex-grow: 2;
 }
 
-div:nth-child(2) {
+header div:nth-child(2) {
   flex-grow: 8;
 }
 
-div:nth-child(3) {
+header div:nth-child(3) {
   flex-grow: 2;
 }
 
-div:nth-child(4) {
+header div:nth-child(4) {
   flex-grow: 2;
 }
 
@@ -58,4 +59,30 @@ div:nth-child(4) {
   padding: 5px;
   width: 100px;
   border-radius: 5px;
+}
+
+.btn-logout {
+  border: none;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  width: 100px;
+  border-radius: 5px;
+  background-color: rgb(190, 18, 91);
+  color: white;
+}
+
+.btn-publish {
+  border: none;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  width: 100px;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(45, 177, 185);
 }

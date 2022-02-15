@@ -1,0 +1,12 @@
+.btn-payment {
+  border: none;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  width: 100px;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(45, 177, 185);
+}
