@@ -14,6 +14,7 @@ const Payment = ({ token }) => {
   const location = useLocation();
   const { title } = location.state;
   const { price } = location.state;
+  const total = price + 0.4 + 0.8;
 
   return token ? (
     <div className="card-payment">
@@ -34,15 +35,24 @@ const Payment = ({ token }) => {
         <div className="col-price">0.80€</div>
       </div>
 
+      <p></p>
+
       <div className="row">
-        <div className="col-description" >Total</div>
-        <div className="col-price">0.80€</div>
+        <div className="col-description">
+          <strong>Total</strong>
+        </div>
+        <div className="col-price">
+          <strong>{total.toFixed(2)}€</strong>
+        </div>
       </div>
 
       <span>
-        Il ne vous reste plus qu'une étape pour vous offrir :"{title}". Vous
-        allez payer {price} €. Frais de port et protection inlcus
+        Il ne vous reste plus qu'une étape pour vous offrir :"
+        <strong>{title}</strong>". Vous allez payer <strong>{price}</strong>€.
+        Frais de port et protection inlcus
       </span>
+
+      <p></p>
 
       <Elements stripe={stripePromise}>
         <CheckoutForm />

@@ -45,7 +45,9 @@ const CheckoutForm = () => {
     <>
       {!completed ? (
         <form onSubmit={handleSubmit}>
-          <CardElement />
+          <div className="payment">
+            <CardElement />
+          </div>
           <button type="submit">Valider</button>
         </form>
       ) : (

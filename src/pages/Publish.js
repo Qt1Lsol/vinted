@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
-import "../assets/css/login.css";
+import "../assets/css/publish.css";
 
 const Publish = ({ token }) => {
   const [picture, setPicture] = useState();
@@ -52,7 +52,7 @@ const Publish = ({ token }) => {
   };
 
   return token ? (
-    <form onSubmit={handleSubmit}>
+    <form className="form-publish" onSubmit={handleSubmit}>
       <input
         // sélectionner plusieur fichiers
         // multiple={true}
